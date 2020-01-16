@@ -14,14 +14,14 @@ public class sq_02 {
         Queue<Object> waitingTruckQue = new LinkedList<Object>();
         //견딜수있는 무게
         int tot_weight = 0;
-        Truck [] trucks = new Truck[truck_weights.length];
         
         //대기큐에 Truck 객체를 넣음
-        for(int i=0; i<trucks.length; i++) {
-        	trucks[i] = new Truck();
-        	trucks[i].setMyWeight(truck_weights[i]);
-        	trucks[i].setTime(bridge_length);
-        	waitingTruckQue.offer(trucks[i]);
+        for(int i=0; i<truck_weights.length; i++) {
+        	Truck truck = new Truck();
+        	truck.setMyWeight(truck_weights[i]);
+        	truck.setTime(bridge_length);
+        	
+        	waitingTruckQue.offer(truck);
         }
         
         tot_weight += ((Truck) waitingTruckQue.peek()).getMyWeight();
