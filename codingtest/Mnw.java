@@ -2,7 +2,6 @@ package codingtest;
 
 import java.util.ArrayList;
 import java.util.List;
-
 public class Mnw {
 	
 	
@@ -85,14 +84,14 @@ public class Mnw {
 	public int s4(int k) {
 		//!12 의 결과값의 마지막 값에 0이 몇개가 출력되는가? 
 		int count=0;
-		int total = 1;
+		long total = 1;
 		
 		for (int i = 1; i <= k; i++) {
 			total *= i;
 		}
 		
 		//변환 int -> String
-		String change = Integer.toString(total);
+		String change = Long.toString(total);
 		System.out.println(change);
 		
 		int i =change.length()-1;
@@ -118,7 +117,7 @@ public class Mnw {
 		m.s2("aaaaavvvvdd");
 		System.out.println();
 		m.s3("0.5.3" , "0.7");
-		m.s4(10);
+		m.s4(20);
 	}
 
 }
