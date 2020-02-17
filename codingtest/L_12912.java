@@ -22,7 +22,6 @@ public class L_12912 {
 	    for (int i = start; i <= end; i++) {
 			answer += i;
 		}
-	    System.out.println(answer);
 	    return answer;
 	    
 	}	
