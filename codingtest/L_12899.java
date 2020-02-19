@@ -4,27 +4,28 @@ public class L_12899 {
 	
 	public String solution(int n) {
 	    String answer = "";
-	    Long n1 =Long.parseLong(String.valueOf(n));
-	    Long total = Long.parseLong(String.valueOf(1));
+	    int rest =0;
 	    
-	    for (long i = 1; i < n1; i=i+3) {
-	    	total += 1;
-		}
-	    for (long i = 2; i < n1; i=i+3) {
-	    	total += 2;
-		}
-	    for (long i = 3; i < n1; i=i+3) {
-	    	total += 7;
-		}
-	      
-	    answer = String.valueOf(total);
+	    while(n>0) {
+	    	rest = n%3; //나머지
+	    	n = n / 3; // 몫 바꿔주기
+	    	if(rest == 0) {
+	    		rest = 4;
+	    		System.out.println(n+"//");
+	    		n -= 1;
+	    		System.out.println(n);
+	    	}
+	    	answer += rest;
+	    }
+	    
 	    System.out.println(answer);
+	    
 	    return answer;
 	}
 
 	public static void main(String[] args) {
 		L_12899 l = new L_12899();
-		l.solution(13);
+		l.solution(10);
 	}
 
 }
