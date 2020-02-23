@@ -2,6 +2,7 @@ package stack_que;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public class sq_04 {
@@ -10,7 +11,7 @@ public class sq_04 {
 	
 	public int solution(int[] priorities, int location) {
         int answer = 0;
-        Queue<Order> que = new LinkedList<sq_04.Order>();
+        Queue<Order> que = new LinkedList<Order>();
         ArrayList<Order> list = new ArrayList<Order>();
         //객체 저장
         for (int i = 0; i < priorities.length; i++) {
@@ -18,7 +19,6 @@ public class sq_04 {
         	list.add(or);
         	que.offer(or);
 		}
-        
         //첫번째 값을 가지고 온다
         while (que.size() >0) {
 			
